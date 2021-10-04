@@ -9,6 +9,7 @@
 
 import os
 import re
+import sys
 
 import nbformat
 import pytest
@@ -37,6 +38,9 @@ def notebooks_list():
     return sorted(notebooks)
 
 
+@pytest.mark.skipif(
+    sys.platform == "win32", reason="Cannot execute notebooks on Windows"
+)
 @pytest.mark.parametrize("path", notebooks_list())
 def test_notebook(path):
     print(path)
