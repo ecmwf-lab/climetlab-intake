@@ -51,6 +51,7 @@ setuptools.setup(
         "scikit-image",  # to allow 'import skimage'
         "rasterio",  # with conda, you may also install gdal
         # "hvplot", # with conda, you may also install pyviz
+        "requests",
     ],
     extras_require=extras_require,
     zip_safe=True,
