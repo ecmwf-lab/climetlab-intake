@@ -9,6 +9,7 @@ TODO
 
 - Add integration with climetlab cache.
 - Test on other example of intake datasets.
+- Add support for windows when "rasterio" or GDAL or the appropriate dependency can be installed correctly.
 
 
 Features
