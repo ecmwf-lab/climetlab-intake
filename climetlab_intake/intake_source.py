@@ -7,11 +7,9 @@
 # granted to it by virtue of its status as an intergovernmental organisation
 # nor does it submit to any jurisdiction.
 #
-from __future__ import annotations
 
-import climetlab as cml
-from climetlab import Dataset
-from climetlab.normalize import normalize_args
+# import climetlab as cml
+from climetlab import Source
 
 __version__ = "0.1.0"
 

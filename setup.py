@@ -35,7 +35,7 @@ extras_require = {}
 setuptools.setup(
     name=package_name,
     version=version,
-    description=( "A source plugin for climetlab for intake"),
+    description=("A source plugin for climetlab for intake"),
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     author="Florian Pinault",
@@ -48,7 +48,9 @@ setuptools.setup(
     extras_require=extras_require,
     zip_safe=True,
     entry_points={
-        "climetlab.source": [ "intake = climetlab_intake.intake_source.IntakeSource" ]
+        "climetlab.source": [
+            "intake = climetlab_intake.intake_source.IntakeSource",
+        ]
     },
     keywords="meteorology",
     classifiers=[
