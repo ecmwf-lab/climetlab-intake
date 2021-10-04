@@ -48,6 +48,8 @@ setuptools.setup(
         "climetlab>=0.8.30",
         "intake",
         "intake-xarray",
+        "rasterio", # with conda, you may also install gdal
+        # "hvplot", # with conda, you may also install pyviz
     ],
     extras_require=extras_require,
     zip_safe=True,

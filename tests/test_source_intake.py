@@ -11,7 +11,7 @@ import climetlab as cml
 
 
 def test_read():
-    ds = cml.load_dataset(
+    ds = cml.load_source(
         "intake",
     )
     xds = ds.to_xarray()
