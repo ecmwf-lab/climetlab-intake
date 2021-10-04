@@ -52,6 +52,7 @@ setuptools.setup(
         "rasterio",  # with conda, you may also install gdal
         # "hvplot", # with conda, you may also install pyviz
         "requests",
+        "aiohttp",
     ],
     extras_require=extras_require,
     zip_safe=True,
