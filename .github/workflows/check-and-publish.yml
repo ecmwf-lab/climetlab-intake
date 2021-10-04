@@ -6,9 +6,11 @@ name: build
 on:
   push:
     branch:
+      - main
 
   pull_request:
     branch:
+      - main
 
   release:
     types: [created]
