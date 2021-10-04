@@ -26,8 +26,8 @@ class IntakeSource(Source):
 
     dataset = None
 
-    def __init__(self, year, parameter):
+    def __init__(self):
         pass
 
-    def to_xarray():
+    def to_xarray(self):
         pass

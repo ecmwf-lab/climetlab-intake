@@ -53,7 +53,7 @@ setuptools.setup(
     zip_safe=True,
     entry_points={
         "climetlab.sources": [
-            "intake = climetlab_intake.intake_source.IntakeSource",
+            "intake = climetlab_intake.intake_source:IntakeSource",
         ]
     },
     keywords="meteorology",
