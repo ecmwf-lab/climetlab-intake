@@ -53,6 +53,7 @@ setuptools.setup(
         # "hvplot", # with conda, you may also install pyviz
         "requests",
         "aiohttp",
+        "s3fs",
     ],
     extras_require=extras_require,
     zip_safe=True,
