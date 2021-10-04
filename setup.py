@@ -35,11 +35,7 @@ extras_require = {}
 setuptools.setup(
     name=package_name,
     version=version,
-    description=(
-        "A dataset plugin for climetlab for the dataset "
-        "intake/"  # noqa: E501
-        "lkqsjd."  # noqa: E501
-    ),
+    description=( "A source plugin for climetlab for intake"),
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     author="Florian Pinault",
@@ -48,16 +44,11 @@ setuptools.setup(
     license="Apache License Version 2.0",
     packages=setuptools.find_packages(),
     include_package_data=True,
-    install_requires=["climetlab>=0.5.6"],
+    install_requires=["climetlab>=0.8.30"],
     extras_require=extras_require,
     zip_safe=True,
     entry_points={
-        "climetlab.datasets": [
-            "intake-lkqsjd= climetlab_intake.lkqsjd:Lkqsjd",  # noqa: E501
-            # other datasets can be included here
-        ]
-        # source plugins would be here
-        # "climetlab.sources": []
+        "climetlab.source": [ "intake = climetlab_intake.intake_source.IntakeSource" ]
     },
     keywords="meteorology",
     classifiers=[

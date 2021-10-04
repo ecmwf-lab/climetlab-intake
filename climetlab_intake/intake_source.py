@@ -1,4 +1,5 @@
-#!/usr/bin/env python3# (C) Copyright 2021 ECMWF.
+#!/usr/bin/env python3
+# (C) Copyright 2021 ECMWF.
 #
 # This software is licensed under the terms of the Apache Licence Version 2.0
 # which can be obtained at http://www.apache.org/licenses/LICENSE-2.0.
@@ -22,27 +23,13 @@ PATTERN = (
 )
 
 
-class Lkqsjd(Dataset):
+class IntakeSource(Source):
     name = None
-    home_page = "-"
-    licence = "-"
-    documentation = "-"
-    citation = "-"
-
-    terms_of_use = (
-        "By downloading data from this dataset, "
-        "you agree to the terms and conditions defined at "
-        "https://github.com/ecmwf-lab/"
-        "climetlab_intake/"
-        "LICENSE"
-        "If you do not agree with such terms, do not download the data. "
-    )
 
     dataset = None
 
-    @normalize_args(parameter=["tp", "t2m"])
     def __init__(self, year, parameter):
-        self.year = year
-        self.parameter = parameter
-        request = dict(parameter=self.parameter, url=URL, year=self.year)
-        self.source = cml.load_source("url-pattern", PATTERN, request)
+        pass
+
+    def to_xarray():
+        pass
