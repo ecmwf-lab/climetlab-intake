@@ -44,11 +44,15 @@ setuptools.setup(
     license="Apache License Version 2.0",
     packages=setuptools.find_packages(),
     include_package_data=True,
-    install_requires=["climetlab>=0.8.30"],
+    install_requires=[
+        "climetlab>=0.8.30",
+        "intake",
+        "intake-xarray",
+    ],
     extras_require=extras_require,
     zip_safe=True,
     entry_points={
-        "climetlab.source": [
+        "climetlab.sources": [
             "intake = climetlab_intake.intake_source.IntakeSource",
         ]
     },

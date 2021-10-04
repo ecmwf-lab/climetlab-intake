@@ -12,9 +12,7 @@ import climetlab as cml
 
 def test_read():
     ds = cml.load_dataset(
-        "intake-lkqsjd",
-        year="2021",
-        parameter="t2m",
+        "intake",
     )
     xds = ds.to_xarray()
     print(xds)
