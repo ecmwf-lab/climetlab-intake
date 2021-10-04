@@ -13,6 +13,8 @@ import climetlab as cml
 def test_read():
     ds = cml.load_source(
         "intake",
+        catalog="https://raw.githubusercontent.com/intake/intake-xarray/master/examples/catalog.yml",
+        item="image",
     )
     xds = ds.to_xarray()
     print(xds)

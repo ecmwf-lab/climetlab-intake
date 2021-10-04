@@ -8,17 +8,12 @@
 # nor does it submit to any jurisdiction.
 #
 
+import intake
+
 # import climetlab as cml
 from climetlab import Source
 
 __version__ = "0.1.0"
-
-URL = "https://storage.ecmwf.europeanweather.cloud"
-
-PATTERN = (
-    "{url}/climetlab/test-data/0.5/fixtures/"
-    "climetlab-cookiecutter-dataset/{year}-{parameter}.grib"
-)
 
 
 class IntakeSource(Source):
@@ -26,8 +21,20 @@ class IntakeSource(Source):
 
     dataset = None
 
-    def __init__(self):
-        pass
+    def __init__(self, catalog, item):
+        self.catalog = intake.open_catalog(catalog)
+        self.item_name = item
+
+    def _get_catalog_item(self, item_name):
+        return self.catalog[item_name]
 
     def to_xarray(self):
-        pass
+
+        import xarray as xr
+
+        item = self._get_catalog_item(self.item_name)
+        da = item.read()
+
+        assert isinstance(da, xr.DataArray)
+
+        return da.to_dataset(name=self.item_name)
